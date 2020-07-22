@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
         .then(users => {
             res.status(200).json(users)
         })
-        .catch(errors => {
+        .catch(error => {
             res.status(500).json({message: "error retrieving users data", error})
         })
 })
